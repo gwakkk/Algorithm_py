@@ -1,12 +1,14 @@
 n= int(input("N을 입력 : "))
-x, y = 1
-plans = input().split()
+x, y = 1, 1
+nx, ny = 1, 1
+a = input().split()
 
-dx = [0, 0, -1 ,1]
-dy = [-1, 1, 0, 0]
+dx = [-1, 1, 0, 0]
+dy = [0, 0, -1 ,1]
+
 mov_types = ['L', 'R', 'U', 'D']
 
-for plan in plans:
+for plan in a:
     for i in range(len(mov_types)):
         if plan == mov_types[i]:
             nx = x + dx[i]
@@ -16,4 +18,4 @@ for plan in plans:
 
         x, y = nx, ny
 
-print(nx, ny)
+print(x, y)
